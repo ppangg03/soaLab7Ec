@@ -15,7 +15,7 @@ public class CustomerDAO {
 	public ArrayList<Customer> getAllCustomers() {
 		Session session = SessionUtil.getSession();
 		Query<Customer> query = session.createQuery("from Customer");
-		ArrayList<Customer> customers = (ArrayList<Customer>) query.list();//1
+		ArrayList<Customer> customers = (ArrayList<Customer>) query.list();
 		session.close();
 		return customers;
 	}
